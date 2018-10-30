@@ -1,0 +1,72 @@
+body {
+    background-color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+form {
+    margin-bottom: 20px;
+}
+
+.todo-list {
+    margin: 4rem auto;
+    padding: 2rem 3rem 3rem;
+    max-width: 500px;
+    background: #FF6666;
+    color: #FFF;
+    box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, .1);
+}
+
+
+
+
+.todo-list h3 {
+
+    text-align: left;
+    color: #fff;
+}
+
+.todo-list p {
+    border-bottom: 1px solid lightblue;
+    padding-bottom: 5px;
+
+}
+
+.tasks,
+.done {
+    list-style-type: none;
+
+}
+
+.tasks li,
+.done li {
+    display: flex;
+    margin: 0 -3rem 4px -6rem;
+    padding: 1.1rem 3rem;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.1);
+}
+
+
+
+.add-task .task-input {
+    padding: 15px 20px;
+    border: none;
+}
+
+#button {
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    font-size: 20px;
+}
+
+.check {
+    padding: 5px;
+    float: right;
+    margin-right: 5px;
+}
