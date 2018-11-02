@@ -9,7 +9,7 @@ $(document).ready(function () {
 
         var newTask = $('input[type = "text"]').val();
         if (newTask) {
-            $('<li>' + newTask + '<button class="delete btn btn-info"> Delete</button>' + '<input  type="checkbox" class="check" id="check">' + "</li>").appendTo('.tasks');
+            $('<li>' + newTask + '<button class="delete btn btn-info col-md-2"> <i  class="fa fa-trash"></i></button>' + '<input  type="checkbox" class="check col-md-2" id="check">' + "</li>").appendTo('.tasks');
             $('input[type = "text"]').val('');
         }
 
@@ -20,11 +20,11 @@ $(document).ready(function () {
         e.preventDefault();
         newTask = $('input[type = "text"]').val();
         if (newTask === "") {
-            alert('you must enter something');
+            alert("You Must Enter SomeThing");
 
 
         } else {
-            $('<li>' + newTask + '<button class="delete btn btn-info"> Delete</button>' + '<input  type="checkbox" class="check" id="check">' + "</li>").appendTo('.tasks');
+            $('<li>' + newTask + '<button class="delete btn btn-info col-md-2 col-sm-2"><i class="fa fa-trash"></i> </button>' + '<input  type="checkbox" class="check col-md-2 col-sm-2 " id="check">' + "</li>").appendTo('.tasks');
             $('input[type = "text"]').val('');
             localStorage.setItem("listItems", $(".tasks").html());
 
@@ -48,20 +48,18 @@ $(document).ready(function () {
         $(this).parent('li').appendTo('.done');
         localStorage.setItem('listDone',$(".done").html());
         localStorage.removeItem("listItems",$('.tasks').html());
-
-        $(".done").on("click", '.delete', function (event) {
-            $(this).parent().fadeOut(500, function () {
-                $(this).remove();
-                localStorage.setItem("listItems", $(".tasks").html());
-                
-
-
-            });
-            event.stopPropagation();
-        });
+        localStorage.setItem('listDone',$(".done").html());
     }));
 
-
-
+    $(".done").on("click", '.delete', function (event) {
+        $(this).parent().fadeOut(500, function () {
+            $(this).remove();
+            localStorage.setItem('listDone',$('done').html());
+            localStorage.removeItem("listDone",$('.done').html());
+            
+        
+        });
+        event.stopPropagation();
+    });
 
 });

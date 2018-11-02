@@ -5,7 +5,11 @@ body {
 }
 
 
-
+.todo-list h1 {
+    font-weight: 600px;
+    letter-spacing: 5px;
+    font-size: 40px;
+}
 form {
     margin-bottom: 20px;
 }
